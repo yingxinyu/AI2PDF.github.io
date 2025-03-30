@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+header {
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.left-panel, .right-panel {
+    width: 50%;
+    flex: 0 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+}
+
+.left-panel {
+    border-right: 1px solid #ccc;
+}
+
+.controls {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#markdownInput {
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+#pdfPreview {
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* 数学公式样式调整 */
+.mjx-chtml {
+    font-size: 1.1em !important;
+    margin: 0.8em 0 !important;
+}
+
+.mjx-block {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+}
+
+/* 行内公式对齐 */
+.mjx-inline {
+    vertical-align: -0.15em;
+}

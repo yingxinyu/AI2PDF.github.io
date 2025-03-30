@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI2PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>AI2PDF</header>
+    <div class="container">
+        <div class="left-panel">
+            <div class="controls">
+                <button id="importBtn">导入文件</button>
+            </div>
+            <textarea id="markdownInput" placeholder="在此粘贴Markdown内容..."></textarea>
+        </div>
+        <div class="right-panel">
+            <div class="controls">
+                <button id="exportBtn">导出PDF</button>
+<select id="languageSelect" style="margin-left:10px">
+  <option value="zh">中文</option>
+  <option value="en">English</option>
+</select>
+                
+            </div>
+            <div id="pdfPreview"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
